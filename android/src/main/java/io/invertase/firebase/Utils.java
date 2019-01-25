@@ -29,7 +29,7 @@ public class Utils {
 
   public static String timestampToUTC(long timestamp) {
     Calendar calendar = Calendar.getInstance();
-    Date date = new Date((timestamp + calendar.getTimeZone().getOffset(timestamp)) * 1000);
+    Date date = new Date((timestamp * 1000 + calendar.getTimeZone().getOffset(timestamp));
     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
     format.setTimeZone(TimeZone.getTimeZone("UTC"));
     return format.format(date);
